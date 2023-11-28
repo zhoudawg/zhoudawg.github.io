@@ -3,69 +3,118 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, ">
       <meta name="description" content="">
       <meta name="author" content="">
       <title>David Zhou</title>
       <!-- Css -->
       <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/lightbox.css" rel="stylesheet" type="text/css" media="all" />
       <link href="css/style.css" rel="stylesheet">
    </head>
    <body>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default color-fill navbar-fixed-top">
          <div class="col-md-12">
             <div class="nav">
                <button class="btn-nav">
-               <span class="icon-bar inverted top"></span>
-               <span class="icon-bar inverted middle"></span>
-               <span class="icon-bar inverted bottom"></span>
+               <span class="icon-bar top"></span>
+               <span class="icon-bar middle"></span>
+               <span class="icon-bar bottom"></span>
                </button>
             </div>
             <a class="navbar-brand" href="index.html">
-               <img class="logo" src="img/" alt="">
+            <img class="logo" src="" alt="">
             </a>
             <div class="nav-content hideNav hidden">
                <ul class="nav-list vcenter">
-                  <li class="nav-item"><a class="item-anchor" href="index.html">home</a></li>
-                  <li class="nav-item"><a class="item-anchor" href="portfolio.html">portfolio</a></li>
+                  <li class="nav-item"><a class="item-anchor" href="index.html">portfolio</a></li>
                   
-                 
+                  
+                  
                </ul>
             </div>
          </div>
       </nav>
-      <!-- Header -->
-      <div class="span12">
-         <div class="col-md-6 no-gutter text-center fill">
-            <h1 class="vcenter">DAVID ZHOU</h1>
-            <h5 class="vcenter">Photography | Videography</h5>
-         </div>
-         <div class="col-md-6 no-gutter text-center">
-            <div id="header" data-speed=".001" data-type="background">
-               <div id="headslide" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner" role="listbox">
-                     <div class="item active">
-                        <img src="img/IMG_9353.jpg" alt="Slide">
-                     </div>
-                     <div class="item">
-                        <img src="img/DSC00229.jpg" alt="Slide">
-                     </div>
-                     <div class="item">
-                        <img src="img/IMG_9920.jpg" alt="Slide">
-                     </div>
-                     <div class="item">
-                        <img src="img/IMG_9995.jpg" alt="Slide">
-                     </div>
+      <section id="portfolio">
+         <div class="container">
+            <ul class="portfolio-sorting list-inline text-center">
+               <li><a href="#" data-group="all" class="active">all</a>
+               </li>
+               <li><a href="#" data-group="portraits">portraits</a>
+               </li>
+               <li><a href="#" data-group="landscape">landscape</a>
+               </li>
+               <li><a href="#" data-group="film">film</a>
+               </li>
+            </ul>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="lightbox-grid square-thumbs" data-gallery-title="Gallery">
+                     <ul class="portfolio-items list-unstyled" id="grid">
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits","film"]'>
+                           <a href="img/000035800026.JPEG" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/000035800026.JPEG" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits"]'>
+                           <a href="img/IMG_9995.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/IMG_9995.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits"]'>
+                           <a href="img/IMG_9353.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/IMG_9353.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits"]'>
+                           <a href="img/DSC00229.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/DSC00229.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits"]'>
+                           <a href="img/IMG_9920.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/IMG_9920.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits","film"]'>
+                           <a href="img/000090830004-2.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/000090830004-2.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portraits","film"]'>
+                           <a href="img/000090830020.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/000090830020.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                       
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      <div style="clear:both;"></div>
+      </section>
       <!-- script -->
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script src="js/menu-color.js"></script>
+      <script src="js/lightbox-plus-jquery.js"></script>
+      <script src="js/jquery.shuffle.min.js"></script>
       <script src="js/modernizr.js"></script>
       <script src="js/script.js"></script>
    </body>
