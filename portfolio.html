@@ -1,118 +1,131 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>David Zhou - Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">David Zhou</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Back to Site</a></li>
-						<li><a href="generic.html" class="active">Portfolio</a></li>
-					
-					</ul>
-				</nav>
-			</header>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Portfolio</h1>
-						</div>
-						<style>	body {
-							height: 100vh;
-							width: 100vw;
-							background-color: black;
-							margin: 0rem;
-							overflow: hidden;
-						  }</style>
-						<div class="major" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-							<img class="image" src="images/000035800026.JPEG" draggable="false" />
-							<img class="image" src="images/IMG_9353.jpg" draggable="false" />
-							<img class="image" src="images/IMG_9920.jpg" draggable="false" />
-							<img class="image" src="images/IMG_9957.jpg" draggable="false" />
-							<img class="image" src="images/IMG_9993.jpg" draggable="false" />
-							<img class="image" src="images/Oleg-1.JPG" draggable="false" />
-							<img class="image" src="images/IMG_9722.jpg" draggable="false" />
-							<img class="image" src="images/IMG_9760.jpg" draggable="false" />
-						</div>
-						  
-						  <script>
-							const track = document.getElementById("image-track");
-
-								const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
-
-								const handleOnUp = () => {
-								track.dataset.mouseDownAt = "0";  
-								track.dataset.prevPercentage = track.dataset.percentage;
-								}
-
-								const handleOnMove = e => {
-								if(track.dataset.mouseDownAt === "0") return;
-								
-								const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-										maxDelta = window.innerWidth / .75;
-								
-								const percentage = (mouseDelta / maxDelta) * -100,
-										nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-										nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-								
-								track.dataset.percentage = nextPercentage;
-								
-								track.animate({
-									transform: `translate(${nextPercentage}%, -50%)`
-								}, { duration: 1000, fill: "forwards" });
-								
-								for(const image of track.getElementsByClassName("image")) {
-									image.animate({
-									objectPosition: `${100 + nextPercentage}% center`
-									}, { duration: 1000, fill: "forwards" });
-								}
-								}
-
-								/* -- Had to add extra lines for touch events -- */
-
-								window.onmousedown = e => handleOnDown(e);
-
-								window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-								window.onmouseup = e => handleOnUp(e);
-
-								window.ontouchend = e => handleOnUp(e.touches[0]);
-
-								window.onmousemove = e => handleOnMove(e);
-
-								window.ontouchmove = e => handleOnMove(e.touches[0]);
-						  </script>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Echoes - Free HTML Bootstrap Template</title>
+      <!-- Css -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/lightbox.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="navbar navbar-default color-fill navbar-fixed-top">
+         <div class="col-md-12">
+            <div class="nav">
+               <button class="btn-nav">
+               <span class="icon-bar top"></span>
+               <span class="icon-bar middle"></span>
+               <span class="icon-bar bottom"></span>
+               </button>
+            </div>
+            <a class="navbar-brand" href="index.html">
+            <img class="logo" src="img/logo.png" alt="logo">
+            </a>
+            <div class="nav-content hideNav hidden">
+               <ul class="nav-list vcenter">
+                  <li class="nav-item"><a class="item-anchor" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="item-anchor" href="about.html">About Me</a></li>
+                  <li class="nav-item"><a class="item-anchor" href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="item-anchor" href="contact.html">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <section id="portfolio">
+         <div class="container">
+            <ul class="portfolio-sorting list-inline text-center">
+               <li><a href="#" data-group="all" class="active">All</a>
+               </li>
+               <li><a href="#" data-group="moment">Moment</a>
+               </li>
+               <li><a href="#" data-group="people">People</a>
+               </li>
+               <li><a href="#" data-group="mountain">Mountain</a>
+               </li>
+            </ul>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="lightbox-grid square-thumbs" data-gallery-title="Gallery">
+                     <ul class="portfolio-items list-unstyled" id="grid">
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["moment","people"]'>
+                           <a href="img/portfolio1.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio1.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["people"]'>
+                           <a href="img/portfolio2.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio2.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["mountain"]'>
+                           <a href="img/portfolio3.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio3.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["people"]'>
+                           <a href="img/portfolio4.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio4.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["moment"]'>
+                           <a href="img/portfolio5.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio5.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["people"]'>
+                           <a href="img/portfolio6.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio6.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["people"]'>
+                           <a href="img/portfolio7.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio7.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["mountain"]'>
+                           <a href="img/portfolio8.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio8.jpg" />
+                              </div>
+                           </a>
+                        </li>
+						<li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["mountain"]'>
+                           <a href="img/portfolio9.jpg" data-lightbox="true">
+                              <div class="background-image-holder">
+                                 <img alt="portfolio" class="background-image" src="img/portfolio9.jpg" />
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- script -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/lightbox-plus-jquery.js"></script>
+      <script src="js/jquery.shuffle.min.js"></script>
+      <script src="js/modernizr.js"></script>
+      <script src="js/script.js"></script>
+   </body>
 </html>
