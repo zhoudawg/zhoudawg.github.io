@@ -11,84 +11,142 @@
       <link href="css/bootstrap.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
    </head>
-   <body>
-      <nav class="navbar navbar-default color-fill navbar-fixed-top">
-         <div class="col-md-12">
-            <div class="nav">
-               <button class="btn-nav">
-               <span class="icon-bar top"></span>
-               <span class="icon-bar middle"></span>
-               <span class="icon-bar bottom"></span>
-               </button>
-            </div>
-            <a class="navbar-brand" href="index.html">
-            <img class="logo" src="img/" alt="">
-            </a>
-            <div class="nav-content hideNav hidden">
-               <ul class="nav-list vcenter">
-                  <li class="nav-item"><a class="item-anchor" href="index.html">home</a></li>
-                  <li class="nav-item"><a class="item-anchor" href="portfolio.html">portfolio</a></li>
-                  <li class="nav-item"><a class="item-anchor" href="about.html">about</a></li>
-                  
-               </ul>
-            </div>
-         </div>
-      </nav>
-      <section id="about">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1>
-                     About Me
-                  </h1>
-                  <br>
-                  <style>
-                     .profile-picture {
-                       width: 150px;
-                       height: 150px;
-                       border-radius: 50%;
-                       overflow: hidden;
-                       background-color: #ddd; /* Placeholder background color */
-                     }
-                 
-                     .profile-picture img {
-                       width: 100%;
-                       height: 100%;
-                       object-fit: cover;
-                     }
-                   </style>
-                 </head>
-                 <body>
-                 
-                   <div class="profile-picture">
-                     <img src="img/P1020279 2.JPG" alt="Profile Picture">
-                   </div>
+   <head>
+      <style>
+          header {
+              background-color: #fff;
+              color: #fff;
+              text-align: center;
+              padding: 0px 0;
+              font-family: 'Times New Roman', Times, serif;
+          }
+  
+          h1 {
+              margin: 0; /* Remove margin to prevent space above the title */
+              letter-spacing: 5px;
+          }
+  
+          nav {
+              text-align: center;
+              background-color: #fff;
+              padding: 10px 0;
+          }
+  
+          nav a {
+              color: #ffffff;
+              text-decoration: none;
+              padding: 10px 15px; /* Adjust padding for menu links */
+              font-family: 'Times New Roman', Times, serif;
+              transition: color 0.3s;
+          }
+  
+          nav a:hover {
+              background-color: #fff;
+              color: #77acaa;
+          }
+      </style>
+  </head>
+  <body>
+  
+  <header>
+     <br>
+      <h1>DAVID ZHOU</h1>
+  </header>
+  <nav>
+   <a href="index.html">portfolio</a>
+   <a href="#">photography</a>
+   <a href="#">videography</a>
+   <a href="about.html">about</a>
+</nav>
 
-                   
-                  
-               </div>
-            </div>
-            <br>
-            <div class="row margin-top">
-               <div class="col-md-0">
-              
-               </div>
-               <div class="col-md-7">
-                  <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula libero auctor dolor vulputate varius. Nunc ac nisl non felis finibus ultricies. Donec at porttitor lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin volutpat augue ex. In hac habitasse platea dictumst. Suspendisse at ante ligula. Nulla facilisis velit egestas massa imperdiet, id posuere turpis feugiat.
-                  </p>
+      <style>
+  
+          header {
+              background-color: #ffffff;
+              color: white;
+              text-align: center;
+              padding: 1em 0;
+          }
+  
+          section {
+              display: flex;
+              flex-wrap: wrap;
+          }
+  
+          .left {
+              flex: 1;
+              order: 1;
+              background: url('img/P1020279\ 2.JPG') center/cover no-repeat;
+              height: 100vh;
+          }
+  
+          .right {
+              flex: 1;
+              order: 2;
+              padding: 2em;
+              background-color: white;
+          }
+  
+          h2 {
+              color: #77acaa;
+          }
+  
+          p {
+              color: #222;
+          }
+      </style>
+  </head>
+  <body>
+
+      <section>
+          <div class="left"></div>
+          <div class="right">
+              <h2>about me</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maiores, fugit odit laborum consequatur, quod sunt laudantium necessitatibus quo quisquam culpa est illum harum delectus et excepturi pariatur aliquid sit?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, voluptas corporis. Cupiditate mollitia deserunt, natus corporis recusandae, voluptates dicta accusamus distinctio deleniti quidem at! Pariatur veritatis provident laborum tempora natus!</p>
+              <div class="contact-box">
+               <br>
+               <h3>contact</h3>
+               <br>
+               <form>
+                   <label for="name">name</label>
+                   <input type="text" id="name" name="name" required>
                   <br>
-                  <p>  
-                     Etiam at consectetur sapien, vel laoreet diam. Aliquam erat volutpat. Quisque fermentum purus ac justo fermentum vulputate eu id libero. Donec quam ipsum, malesuada nec interdum in, commodo vel nisl. Aliquam erat volutpat. Donec suscipit molestie urna, at pharetra tortor interdum eget. Ut lobortis viverra ex, quis faucibus sapien iaculis in. Suspendisse laoreet ornare justo sit amet fermentum. Pellentesque non nulla id libero pretium bibendum vel nec dolor. 
-                  </p>
-               </div>
-               
-                  
-            </div>
-            
-         </div>
-               
+                   <label for="email">email</label>
+                   <input type="email" id="email" name="email" required>
+                  <br>
+                   <label for="message">message</label>
+                   <textarea id="message" name="message" rows="1" required></textarea>
+                  <br>
+                   <button type="submit">send</button>
+               </form>
+           </div>
       </section>
+</body>
+    <style>
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background-color: transparent;
+            box-sizing: border-box;
+            margin-bottom: 1em;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+
+  
+  </body>
       <!-- script -->
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.min.js"></script>

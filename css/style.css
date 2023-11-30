@@ -20,7 +20,7 @@ h5,
 h6 {
     font-family: 'Times New Roman', serif;
     font-weight: 200;
-    color: #111;
+    color: #77acaa;
     line-height: 1.5em;
     margin-top: 0;
 }
@@ -44,7 +44,7 @@ section {
 }
 a,
 a:link {
-    color: #000000;
+    color: #222;
 }
 a:hover,
 a:focus,
