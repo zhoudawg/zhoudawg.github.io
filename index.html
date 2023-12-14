@@ -63,103 +63,108 @@
 </nav>
 
 </body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        #gallery {
+            column-count: 4;
+            column-gap: 15px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            margin: 0 0 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mfp-hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="gallery">
+    <div class="gallery-item">
+        <a href="img/000035800026.JPEG" class="image-link">
+            <img src="img/000035800026.JPEG" alt="Image 1">
+        </a>
+    </div>
+    <div class="gallery-item">
+        <a href="img/IMG_9920.jpg" class="image-link">
+            <img src="img/IMG_9920.jpg" alt="Image 2">
+        </a>
+    </div>
+    <div class="gallery-item">
+      <a href="img/IMG_9353.jpg" class="image-link">
+          <img src="img/IMG_9353.jpg" alt="Image 2">
+      </a>
+   </div>
+   <div class="gallery-item">
+      <a href="img/IMG_9995.jpg" class="image-link">
+         <img src="img/IMG_9995.jpg" alt="Image 2">
+      </a>
+   </div>
+   <div class="gallery-item">
+      <a href="img/DSC00229.jpg" class="image-link">
+         <img src="img/DSC00229.jpg" alt="Image 2">
+      </a>
+   </div>
+   <div class="gallery-item">
+      <a href="img/000090830004-2.jpg" class="image-link">
+         <img src="img/000090830004-2.jpg" alt="Image 1">
+      </a>
+   </div>
+   <div class="gallery-item">
+      <a href="img/02_COMP_FIGUREGROUND_DAVIDZHOU-2.jpg class="image-link">
+         <img src="img/02_COMP_FIGUREGROUND_DAVIDZHOU-2.jpg" alt="Image 1">
+      </a>
+   </div>
+   <div class="gallery-item">
+      <a href="img/02_COMP_REPETITION_DAVIDZHOU.jpg" class="image-link">
+          <img src="img/02_COMP_REPETITION_DAVIDZHOU.jpg" alt="Image 2">
+      </a>
+   </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initialize Magnific Popup
+        $('.image-link').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
 
-   <body>
+
       
-      <section id="portfolio">
-         <div class="container">
-            <ul class="portfolio-sorting list-inline text-center">
-               <li><a href="#" data-group="all" class="active">all</a>
-               </li>
-               <li><a href = "#" data-group="sports">sports</a>
-               </li>
-               <li><a href="#" data-group="natural">landscape</a>
-               </li>
-               <li><a href="#" data-group="film">film</a>
-               </li>
-               <li><a href = "#" data-group="portrait">portraits</a>
-               </li>
-               <li><a href = "#" data-group="food">food</a>
-               </li>
-            </ul>
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="lightbox-grid square-thumbs" data-gallery-title="Gallery">
-                     <ul class="portfolio-items list-unstyled" id="grid">
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait","film"]'>
-                           <a href="img/000035800026.JPEG" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/000035800026.JPEG"/>
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait","sports"]'>
-                           <a href="img/IMG_9920.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/IMG_9920.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait"]'>
-                           <a href="img/IMG_9353.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image-portrait" src="img/IMG_9353.jpg"/>
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["food"]'>
-                           <a href="img/02_COMP_REPETITION_DAVIDZHOU.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/02_COMP_REPETITION_DAVIDZHOU.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait","sports"]'>
-                           <a href="img/IMG_9995.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/IMG_9995.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait","film"]'>
-                           <a href="img/000090830004-2.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/000090830004-2.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait","film"]'>
-                           <a href="img/000090830020.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image-portrait" src="img/000090830020.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait"]'>
-                           <a href="img/DSC00229.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image" src="img/DSC00229.jpg" />
-                              </div>
-                           </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12 no-gutter" data-groups='["portrait"]'>
-                           <a href="img/000090830007.jpg" data-lightbox="true">
-                              <div class="background-image-holder">
-                                 <img alt="portfolio" class="background-image-portrait" src="img/000090830007.jpg"/>
-                              </div>
-                           </a>
-                        </li>
-                       
-                              </div>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+      
       <!-- script -->
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.min.js"></script>
