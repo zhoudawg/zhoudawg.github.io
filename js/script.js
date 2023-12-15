@@ -95,6 +95,3 @@ $(document).ready(function()
 {
   shuffleme.init(); //filter portfolio
 });
-
-
-
